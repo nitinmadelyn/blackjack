@@ -1,0 +1,463 @@
+body {
+  background-image: url("../images/black-jack-bg.jpeg");
+  font-family: "Secular One", sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 48px;
+  margin: 0px;
+}
+
+.app-header {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p, .pending-bet-div {
+  color: aliceblue;
+}
+
+.pending-bet-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.205);
+  padding-left: 10px;
+  border-radius: 6px;
+}
+
+.game-result-div {
+  height: 10vh;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+}
+
+.betting-options {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.betting-option {
+  border-radius: 4px;
+  margin-left: 5px;
+  height: 4vh;
+  border: none;
+  font-size: 14px;
+  width: 5.3vw;
+}
+.betting-option:focus {
+  outline: none;
+}
+.betting-option:active {
+  border-color: transparent !important;
+  outline: none;
+}
+
+.inner-betting-options {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bet-button {
+  height: 100%;
+  border-radius: 60px;
+}
+.bet-button:hover {
+  background-color: rgb(94, 248, 23);
+  border-radius: 60px;
+  cursor: pointer;
+}
+.bet-button:active {
+  background-color: rgb(94, 248, 23);
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+.reset-button {
+  margin-right: 10px;
+  height: 4vh;
+  border-radius: 4px;
+}
+.reset-button:focus {
+  outline: none;
+}
+
+.pending-bet {
+  font-size: 36px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chip-count {
+  font-size: 36px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.205);
+  padding-left: 10px;
+  border-radius: 6px;
+}
+
+.chip-number {
+  font-size: 48px;
+  margin: 0px;
+  margin-left: 5px;
+  margin-right: 15px;
+  width: 20vh;
+  text-align: left;
+}
+
+#ready-to-start {
+  background-color: rgba(7, 201, 7, 0.932);
+  border: none;
+  cursor: pointer;
+}
+
+#not-ready {
+  color: rgb(180, 180, 180);
+}
+
+#attention-red {
+  color: rgba(231, 23, 23, 0.932);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .app {
+    width: 100vw;
+  }
+  .pending-bet-div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.205);
+    padding-left: 10px;
+    border-radius: 6px;
+    width: 90vw;
+  }
+  .app-header {
+    margin-top: 5px;
+    width: 100vw;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 18px;
+    margin: 0px;
+  }
+  .chip-number {
+    font-size: 18px;
+    text-align: right;
+  }
+  .chip-count {
+    font-size: 18px;
+    width: 90vw;
+    justify-content: flex-start;
+  }
+  .pending-bet {
+    font-size: 18px;
+  }
+  .game-result-div {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 5px;
+    align-items: center;
+  }
+  .bet-button {
+    height: 50px;
+    border-radius: 60px;
+  }
+  .betting-option {
+    border-radius: 4px;
+    margin-left: 5px;
+    margin-top: 5px;
+    height: 4vh;
+    border: none;
+    font-size: 14px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+  }
+  .inner-betting-options {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .pending-bet-div {
+    justify-content: space-between;
+  }
+  .app-header {
+    margin-top: 5px;
+    width: 100vw;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .chip-number {
+    font-size: 18px;
+    text-align: right;
+  }
+  .chip-count {
+    font-size: 18px;
+    width: 90vw;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .pending-bet {
+    font-size: 18px;
+  }
+  .game-result-div {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 5px;
+    align-items: center;
+  }
+  .bet-button {
+    height: 50px;
+    border-radius: 60px;
+  }
+  .betting-option {
+    border-radius: 4px;
+    margin-left: 5px;
+    margin-top: 5px;
+    height: 4vh;
+    border: none;
+    font-size: 14px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+  }
+  .inner-betting-options {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  .restart-button {
+    position: absolute;
+    right: 5px;
+    bottom: 4px;
+  }
+  .reset-button {
+    margin-right: 5px;
+    height: auto;
+  }
+}
+.game-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/green-felt.jpg");
+  width: 90%;
+  height: 70vh;
+  border-radius: 200px;
+  border: rgb(27, 27, 27) 10px solid;
+  margin-top: 10px;
+}
+
+.dealers-cards-div {
+  margin: -16px 0px 10px 0px;
+  height: 35vh;
+}
+
+.card-img {
+  max-height: 20vh;
+  width: auto;
+}
+
+.sideways-double-card {
+  max-height: 20vh;
+  width: auto;
+  transform: rotate(90deg);
+}
+
+h1 {
+  color: aliceblue;
+  text-align: center;
+}
+
+.locked-bet-img {
+  height: 10vh;
+  cursor: pointer;
+  border-radius: 180px;
+}
+
+.locked-bet-img:hover {
+  background-color: rgb(94, 248, 23);
+}
+
+.empty-chip-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+}
+
+.locked-bet-amount {
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(248, 250, 248, 0.849);
+  padding: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.count {
+  margin: 0px 0px 0px 0px;
+  height: 47px;
+  font-size: 36px;
+}
+
+.chip-or-message {
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameplay-options {
+  display: grid;
+  clear: both;
+  margin: 0 30px;
+  height: 14vh;
+  float: right;
+}
+
+.popup-bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.popup {
+  text-align: center;
+  position: absolute;
+  width: 30%;
+  background-color: #000;
+  margin: 15%;
+  width: 50%;
+  padding: 70px 0;
+  z-index: 1;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+.popup h1 {
+  color: #fff;
+}
+.popup input[type=text] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.popup button {
+  width: 100px;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.players-area {
+  display: flex;
+  border-top: 3px solid #000;
+  width: 100%;
+}
+.players-area .player {
+  padding-left: 50px;
+  display: flex;
+  width: 50%;
+  height: 35vh;
+  position: relative;
+}
+.players-area .player .username {
+  float: left;
+  top: 0;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  opacity: 0.7;
+}
+.players-area .player:first-child {
+  border-right: 3px solid #000;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .game-div {
+    height: 50vh;
+    border-radius: 40px;
+  }
+  .card-img {
+    max-height: 11vh;
+    width: auto;
+  }
+  .count {
+    margin: 0px 0px 0px 0px;
+    height: 40px;
+    font-size: 24px;
+  }
+  .result-message {
+    font-size: 18px;
+  }
+  .sideways-double-card {
+    max-height: 11vh;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  .card-img {
+    max-height: 14vh;
+  }
+  .count {
+    height: 28px;
+    font-size: 24px;
+  }
+  .result-message {
+    font-size: 18px;
+  }
+  .chip-or-message {
+    height: 8vh;
+    margin: 5px;
+  }
+  .sideways-double-card {
+    max-height: 14vh;
+  }
+  .result-message {
+    margin: 0px;
+  }
+}/*# sourceMappingURL=main.css.map */
