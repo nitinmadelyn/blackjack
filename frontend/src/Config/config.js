@@ -1,5 +1,5 @@
 const config = {
-    chatServerURL: 'https://localhost:3001?username={username}',
+    chatServerURL: process.env.chatServerURL || 'https://localhost:3001?username={username}',
     deckOfCards: [
         "AH",
         "2H",
